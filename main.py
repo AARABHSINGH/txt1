@@ -22,14 +22,14 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "7186754551:AAFmeQI0oVT7FFFWk4T9INvr9JZBcOKM7wc",
-             api_id= 25434657,
-             api_hash= "22cfc54f94cf17360dc1475a51e38518")
+             bot_token= "__",
+             api_id= __,
+             api_hash= "__")
 
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"Hello [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /ARVIN")
+    editable = await m.reply_text(f"Hello [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /FRIEND")
 
 
 @bot.on_message(filters.command("stop"))
@@ -189,7 +189,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**Downloading:-**\n\n**Name :-*ARVIN* `\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
+                    Show = f"**Downloading:-**\n\n**Name :-*FRIEND* `\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
